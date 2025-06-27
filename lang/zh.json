@@ -1,0 +1,11 @@
+{
+  "title": "Manto MT 空投",
+  "description": "领取 3 个 Manto MT 的官方表单。连接 Phantom 钱包并填写资料。",
+  "placeholders": {
+    "name": "全名",
+    "email": "电子邮件",
+    "country": "国家",
+    "phone": "电话号码"
+  },
+  "button": "提交"
+}

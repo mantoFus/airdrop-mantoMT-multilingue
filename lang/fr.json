@@ -1,0 +1,11 @@
+{
+  "title": "Airdrop Manto MT",
+  "description": "Formulaire officiel pour recevoir 3 Manto MT. Connectez-vous avec Phantom et complétez vos données.",
+  "placeholders": {
+    "name": "Nom complet",
+    "email": "Adresse e-mail",
+    "country": "Pays",
+    "phone": "Téléphone"
+  },
+  "button": "Envoyer"
+}
