@@ -1,32 +1,29 @@
-
-document.getElementById('language').addEventListener('change', function() {
-  const lang = this.value;
-  fetch(`locales/${lang}.json`)
-    .then(res => res.json())
-    .then(data => {
-      document.getElementById('title').textContent = data.title;
-      document.getElementById('description').textContent = data.description;
-      document.getElementById('name').placeholder = data.name;
-      document.getElementById('email').placeholder = data.email;
-      document.getElementById('country').placeholder = data.country;
-      document.getElementById('phone').placeholder = data.phone;
-    });
-});
-
-async function connectPhantom() {
-  if ('solana' in window) {
-    const resp = await window.solana.connect();
-    document.getElementById('wallet').value = resp.publicKey.toString();
-  } else {
-    alert("Phantom Wallet no está disponible");
+// 1. Función para cargar archivo JSON del idioma
+async function cargarTraducciones(idioma) {
+  try {
+    const response = await fetch(`lang/${idioma}.json`);
+    const data = await response.json();
+    aplicarTraducciones(data);
+  } catch (error) {
+    console.error(`Error cargando el archivo de idioma (${idioma}):`, error);
   }
 }
 
-document.getElementById('airdropForm').addEventListener('submit', function(e) {
-  e.preventDefault();
-  const formData = new FormData(this);
-  fetch("YOUR_GOOGLE_SCRIPT_URL", {
-    method: "POST",
-    body: formData
-  }).then(() => alert("Datos enviados correctamente"));
+// 2. Función para aplicar traducciones a los elementos HTML
+function aplicarTraducciones(textos) {
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (textos[key]) el.innerHTML = textos[key];
+  });
+}
+
+// 3. Detectar cambio de idioma en el selector
+document.getElementById('idioma').addEventListener('change', (e) => {
+  const idiomaSeleccionado = e.target.value;
+  cargarTraducciones(idiomaSeleccionado);
+});
+
+// 4. Cargar por defecto idioma 'es' al iniciar
+window.addEventListener('DOMContentLoaded', () => {
+  cargarTraducciones('es');
 });
