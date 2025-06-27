@@ -1,11 +1,13 @@
 {
-  "title": "ايردروب مانتو MT",
-  "description": "النموذج الرسمي لاستلام 3 مانتو MT. اتصل بمحفظة فانتوم واملأ بياناتك.",
+  "label_idioma": "اللغة:",
+  "titulo_formulario": "نموذج الإنزال الجوي Manto MT",
+  "descripcion_bienvenida": "النموذج الرسمي لاستلام 3 Manto MT. قم بالاتصال بمحفظة Phantom وأكمل بياناتك.",
   "placeholders": {
     "name": "الاسم الكامل",
     "email": "البريد الإلكتروني",
-    "country": "البلد",
+    "country": "الدولة",
     "phone": "رقم الهاتف"
   },
-  "button": "إرسال"
+  "boton_enviar": "إرسال",
+  "boton_conectar": "اتصال بمحفظة Phantom"
 }
