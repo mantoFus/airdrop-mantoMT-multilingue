@@ -1,13 +1,13 @@
 {
-  "label_idioma": "Idioma:",
-  "titulo_formulario": "Formulario de Airdrop",
-  "descripcion_bienvenida": "Bienvenido al formulario oficial para recibir 3 Manto MT. Conéctate con Phantom y completa tus datos.",
+  "label_idioma": "Language:",
+  "titulo_formulario": "Airdrop Form",
+  "descripcion_bienvenida": "Welcome to the official form to receive 3 Manto MT. Connect with Phantom and complete your data.",
   "placeholders": {
-    "name": "Nombre completo",
-    "email": "Correo electrónico",
-    "country": "País",
-    "phone": "Teléfono"
+    "name": "Full name",
+    "email": "Email address",
+    "country": "Country",
+    "phone": "Phone number"
   },
-  "boton_enviar": "Enviar",
-  "boton_conectar": "Conectar Wallet Phantom"
+  "boton_enviar": "Submit",
+  "boton_conectar": "Connect Wallet Phantom"
 }
